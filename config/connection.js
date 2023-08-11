@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/mentors.ai');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/mentors_ai');
 
 module.exports = mongoose.connection;

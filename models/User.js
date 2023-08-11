@@ -26,8 +26,11 @@ const userSchema = new Schema({
         minLength: 5
     },
     icon_ID: String,
-    currentMentor: String,
-    mentors: [String],
+    currentMentor: {
+        type: Schema.Types.ObjectId,
+        ref: 'Mentor',
+    },
+    mentors: [Mentor.schema],
 });
 
 userSchema.pre('save', async function (next) {
